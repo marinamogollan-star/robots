@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Contacto — Estilo Gótico</title>
+
+<!-- Tipografías ornamentales -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+
+<style>
+  /* ===== Reset y base ===== */
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 10% 10%, rgba(60,10,20,0.35), transparent 5%),
+      radial-gradient(1000px 500px at 90% 90%, rgba(10,20,40,0.35), transparent 5%),
+      linear-gradient(180deg,#050405 0%, #161217 60%);
+    color:#e9e6e3;
+    font-family: "Cinzel", serif;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    padding:28px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  /* ===== Contenedor central ===== */
+  .card{
+    width:100%;
+    max-width:920px;
+    background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border:1px solid rgba(255,255,255,0.04);
+    border-radius:14px;
+    padding:26px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.02);
+    position:relative;
+    overflow:hidden;
+  }
+
+  /* Ornamento superior (SVG-like) */
+  .ornament {
+    position:absolute;
+    left: -40px;
+    top: -30px;
+    width:220px;
+    opacity:0.12;
+    transform: rotate(-8deg);
+    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.6));
+  }
+
+  header .title{
+    display:flex;
+    gap:18px;
+    align-items:center;
+    margin-bottom:8px;
+  }
+  .sigil{
+    width:84px;
+    height:84px;
+    border-radius:12px;
+    background:linear-gradient(180deg,#2b0b10 0%, #14060a 100%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:"Uncial Antiqua", serif;
+    font-size:30px;
+    color:#f6e9e6;
+    border:4px solid rgba(180,40,60,0.08);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.6), inset 0 -6px 24px rgba(0,0,0,0.6);
+  }
+
+  h1{
+    margin:0;
+    font-size:28px;
+    letter-spacing:1px;
+    color: #f4e8e7;
+    text-shadow: 0 2px 0 rgba(0,0,0,0.6);
+  }
+  p.lead{
+    margin:6px 0 0 0;
+    color: #cfc7c5;
+    font-size:13px;
+    max-width:760px;
+  }
+
+  /* ===== Layout: form + aside ===== */
+  .layout{
+    display:grid;
+    grid-template-columns: 1fr 320px;
+    gap:18px;
+    margin-top:16px;
+  }
+
+  form{
+    background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+    padding:14px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,0.02);
+  }
+
+  .field{
+    margin-bottom:14px;
+    display:flex;
+    flex-direction:column;
+  }
+
+  label{
+    font-size:13px;
+    color:#dfd6d4;
+    margin-bottom:6px;
+    display:inline-flex;
+    gap:8px;
+    align-items:center;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea{
+    background: linear-gradient(180deg, rgba(255,255,255,0.008), rgba(255,255,255,0.01));
+    border:1px solid rgba(255,255,255,0.04);
+    padding:12px 14px;
+    border-radius:10px;
+    color:#efe9e6;
+    font-size:14px;
+    outline:none;
+    transition: box-shadow .18s ease, transform .08s ease;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.6);
+    resize:vertical;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus,
+  select:focus{
+    box-shadow: 0 10px 30px rgba(150,45,60,0.18), 0 2px 6px rgba(0,0,0,0.6);
+    transform: translateY(-2px);
+    border-color: rgba(200,80,100,0.6);
+  }
+
+  textarea{ min-height:140px; }
+
+  /* Botón estilo gótico */
+  .actions{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    margin-top:8px;
+  }
+
+  button.btn{
+    background: linear-gradient(180deg,#2e0810 0%, #4a0b17 100%);
+    color:#fff;
+    padding:12px 18px;
+    border-radius:12px;
+    border:2px solid rgba(255,255,255,0.03);
+    cursor:pointer;
+    font-weight:700;
+    font-family:"Cinzel", serif;
+    letter-spacing:0.6px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.7);
+    transition: transform .12s ease, box-shadow .12s ease;
+  }
+
+  button.btn:hover{ transform: translateY(-3px); box-shadow: 0 20px 48px rgba(0,0,0,0.75); }
+  button.btn.secondary{
+    background:transparent;
+    border:1px dashed rgba(255,255,255,0.06);
+    color:#d6cfcf;
+    padding:10px 14px;
+    font-weight:600;
+  }
+
+  /* Aside info */
+  aside{
+    padding:14px;
+    border-radius:10px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
+    border:1px solid rgba(255,255,255,0.02);
+  }
+  aside h3{ margin-top:0; color:#ecd6d7; font-size:16px;}
+  .info p{ color:#cfc7c5; font-size:13px; margin:8px 0; }
+
+  /* Small decorative divider */
+  .divider{
+    height:2px;
+    background: linear-gradient(90deg, transparent, rgba(160,80,100,0.12), transparent);
+    margin:12px 0;
+    border-radius:6px;
+  }
+
+  /* Error y success */
+  .error{ color:#ffb7b7; font-size:13px; margin-top:6px; display:none; }
+  .hint{ color:#bfb6b6; font-size:13px; }
+
+  .success-msg{
+    display:none;
+    padding:12px;
+    border-radius:10px;
+    background: linear-gradient(180deg,#1a241a, #0f140f);
+    color:#cfe9d8;
+    border:1px solid rgba(110,170,130,0.08);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  }
+
+  /* File input styling */
+  .file-wrap{
+    display:flex;gap:8px;align-items:center;
+  }
+  .file-label{
+    display:inline-block;
+    padding:8px 12px;
+    border-radius:10px;
+    background: linear-gradient(180deg,#121212,#1a1012);
+    border:1px solid rgba(255,255,255,0.03);
+    cursor:pointer;
+    font-size:13px;
+    color:#e9e6e3;
+  }
+  input[type="file"]{ display:none; }
+
+  /* Footer */
+  .footnote{ color:#9f9495; font-size:12px; margin-top:12px; }
+
+  /* Responsive */
+  @media (max-width:880px){
+    .layout{ grid-template-columns: 1fr; }
+    .sigil{width:64px;height:64px;font-size:26px}
+  }
+  /* ============================
+   FOOTER GÓTICO OSCURO
+============================ */
+.footer-gothic {
+    background: #0d0d0d; /* negro profundo */
+    border-top: 3px solid #7a0f18; /* rojo sangre gótico */
+    padding: 25px 0;
+    font-family: "Cinzel", serif; /* fuente estilo gótico */
+    letter-spacing: 1px;
+    text-align: center;
+    color: #c9c9c9;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.7);
+    position: relative;
+}
+
+/* Decoraciones góticas — líneas superior e inferior */
+.footer-gothic::before,
+.footer-gothic::after {
+    content: "✦ ✧ ✦";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #7a0f18;
+}
+
+.footer-gothic::before {
+    top: 5px;
+}
+
+.footer-gothic::after {
+    bottom: 5px;
+}
+
+.footer-content p {
+    margin: 8px 0;
+    color: #d4d4d4;
+}
+
+.back-to-home {
+    font-size: 16px;
+    color: #b61a23; /* rojo sangre */
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+/* Hover dramático gótico */
+.back-to-home:hover {
+    color: #ff4455;
+    text-shadow: 0 0 10px #5a0a0a;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="card" role="region" aria-labelledby="contactoTitle">
+  <!-- Ornamento SVG (decoración sutil) -->
+  <svg class="ornament" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+      <path d="M10 50 C 30 10, 70 10, 90 50 S 150 90, 190 40" />
+      <path d="M15 55 C 35 25, 65 25, 85 55 S 145 95, 185 45" opacity="0.6"/>
+    </g>
+  </svg>
+
+  <header>
+    <div class="sigil" aria-hidden="true">✠</div>
+    <div>
+      <div class="title">
+        <h1 id="contactoTitle">Contacto — Cámara de Sombras</h1>
+      </div>
+      <p class="lead">Déjanos tu mensaje, y un emisario oscuro te responderá. Rellena los campos con verdad.</p>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- FORM -->
+    <form id="gothForm" novalidate>
+      <div class="field">
+        <label for="name">Nombre completo</label>
+        <input id="name" name="name" type="text" placeholder="Ej. Lucía de la Noche" required aria-required="true" />
+        <div class="error" id="err-name">Por favor escribe tu nombre.</div>
+      </div>
+
+      <div class="field">
+        <label for="email">Correo electrónico</label>
+        <input id="email" name="email" type="email" placeholder="tú@correo.com" required />
+        <div class="error" id="err-email">Introduce un correo válido.</div>
+      </div>
+
+      <div class="field">
+        <label for="phone">Teléfono (opcional)</label>
+        <input id="phone" name="phone" type="tel" placeholder="+52 1 55 1234 5678" />
+        <div class="hint">Formato internacional recomendado.</div>
+      </div>
+
+      <div class="field">
+        <label for="subject">Asunto</label>
+        <select id="subject" name="subject" required>
+          <option value="">— Selecciona —</option>
+          <option value="consulta">Consulta general</option>
+          <option value="soporte">Soporte técnico</option>
+          <option value="colaboracion">Colaboración</option>
+          <option value="prensa">Prensa</option>
+        </select>
+        <div class="error" id="err-subject">Selecciona un asunto.</div>
+      </div>
+
+      <div class="field">
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        <div class="error" id="err-message">El mensaje no puede quedar vacío.</div>
+      </div>
+
+      <div class="field">
+        <label>Adjuntar archivo (opcional)</label>
+        <div class="file-wrap">
+          <label class="file-label" for="file">Seleccionar archivo</label>
+          <span id="file-name" style="font-size:13px;color:#cfc7c5">Ninguno</span>
+        </div>
+        <input id="file" name="file" type="file" accept=".pdf,.jpg,.png,.zip" />
+      </div>
+
+      <div class="divider" role="separator" aria-hidden="true"></div>
+
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+        <div style="display:flex;flex-direction:column;">
+          <label style="display:flex;gap:8px;align-items:center;font-size:13px;">
+            <input id="consent" name="consent" type="checkbox" required style="width:16px;height:16px" />
+            Acepto recibir respuesta por correo.
+          </label>
+          <div class="error" id="err-consent">Debes aceptar recibir respuesta.</div>
+        </div>
+
+        <div class="actions" aria-hidden="false">
+          <button type="button" class="btn secondary" id="resetBtn">Limpiar</button>
+          <button type="submit" class="btn" id="sendBtn">Enviar Mensaje</button>
+        </div>
+      </div>
+
+      <div class="footnote">Al enviar aceptas nuestra <em>Cripta de Privacidad</em> — tus datos no serán vendidos a mortales.</div>
+
+      <div style="height:12px"></div>
+
+      <div class="success-msg" id="successBox" role="status" aria-live="polite">
+        <strong>Mensaje enviado.</strong>
+        <div style="margin-top:6px;color:#bcdcb1">Hemos recibido tu mensaje. Responderemos en breve.</div>
+      </div>
+    </form>
+
+    <footer>
+    <div class="container">
+        <div class="footer-content">
+            <p>Todos los derechos reservados: Armando Valera Paulino</p>
+            <a href="index.html" class="back-to-home">Volver al Inicio</a>
+        </div>
+    </div>
+</footer>
+    </footer>
+</script>
+</body>
+</html>

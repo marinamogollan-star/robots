@@ -1,0 +1,207 @@
+/* ============================================
+   ESTILO GENERAL — KAWAII / TIKTOK STYLE
+============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fff6ff; /* rosita suuuper suave */
+    color: #444;
+    padding-bottom: 80px;
+}
+
+/* Sticker inferior kawaii */
+.sticker-bottom {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 36px;
+    animation: bounce 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+/* ============================================
+   TÍTULO PRINCIPAL KAWAII
+============================================ */
+.page-title {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 46px;
+    font-weight: 900;
+    color: #ff4fbb;
+    letter-spacing: 1px;
+
+    animation: glowKawaii 2s infinite alternate ease-in-out;
+}
+
+@keyframes glowKawaii {
+    0% {
+        text-shadow: 0 0 10px #ffc7ef, 0 0 20px #ff9ddd;
+        transform: scale(1);
+    }
+    100% {
+        text-shadow: 0 0 18px #ff7bd1, 0 0 35px #ffd3f7;
+        transform: scale(1.05);
+    }
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 6px;
+    font-size: 18px;
+    color: #666;
+}
+
+/* ============================================
+   TARJETAS / CARDS
+============================================ */
+.card {
+    background: #ffffffaa;
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px #ffd8f7;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 6px 20px #ffb4ec;
+}
+
+/* ============================================
+   GRID
+============================================ */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 20px;
+    padding: 30px 40px;
+}
+
+.sticky {
+    position: sticky;
+    top: 20px;
+}
+
+/* ============================================
+   CHIPS NÚMEROS
+============================================ */
+.chip {
+    background: #ff90d8;
+    color: white;
+    padding: 3px 9px;
+    border-radius: 50px;
+    font-size: 14px;
+    margin-right: 6px;
+}
+
+/* ============================================
+   BENEFITS BOXES
+============================================ */
+.benefits {
+    display: flex;
+    gap: 20px;
+}
+
+.box {
+    background: #ffe6f7;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px #ffd6f4;
+}
+
+/* ============================================
+   LISTAS
+============================================ */
+.simple li, 
+.uses-list li {
+    padding: 6px 0;
+}
+
+/* ============================================
+   ASIDE — QUICK FACTS
+============================================ */
+.fact {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #fff1fb;
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+/* Sección */
+.galeria-kawaii {
+    text-align: center;
+    padding: 40px;
+    background: #ffeefc;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 0 0 15px #ffbde1;
+}
+
+/* Redes kawaii */
+.redes-kawaii {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.redes-kawaii .icono {
+    padding: 10px 18px;
+    border-radius: 50px;
+    background: white;
+    font-size: 18px;
+    text-decoration: none;
+    color: #ff6fb5;
+    font-weight: bold;
+    border: 2px solid #ffa6d2;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px #ffcdf0;
+}
+
+/* Hover kawaii */
+.redes-kawaii .icono:hover {
+    transform: scale(1.1) rotate(-3deg);
+    box-shadow: 0 0 15px #ff9ad8;
+}
+
+/* Colores según red */
+.fb { color: #5b7aff; border-color: #8ba3ff; }
+.ig { color: #ff5fa2; border-color: #ff94c7; }
+.tk { color: #ff74b7; border-color: #ffaddc; }
+.yt { color: #ff4c4c; border-color: #ff8f8f; }
+
+/* Galería */
+.galeria-grid {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.galeria-grid img {
+    width: 90%;
+    max-width: 650px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #ffbadf;
+    transition: 0.3s;
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.03);
+}
+
