@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robots en Almacenes y Logística</title>
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: #0a0f14;
+            color: #eceff4;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 900px;
+            background: rgba(20, 30, 40, 0.9);
+            padding: 40px 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 35px rgba(0, 0, 0, 0.85);
+        }
+
+        h1 {
+            font-size: 2.6rem;
+            color: #6bcaff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #8fcfff;
+            margin-top: 30px;
+            margin-bottom: 14px;
+        }
+
+        p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 18px;
+            color: #dce6f0;
+        }
+
+        .icon {
+            font-size: 2.4rem;
+            display: block;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .highlight {
+            background: #07304b;
+            padding: 12px 14px;
+            border-left: 4px solid #38aaff;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+         /* RESET */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Playfair Display', 'Georgia', serif;
+        background: linear-gradient(180deg, #0b0b0b, #000);
+        color: #e5e5e5;
+        padding: 50px 20px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 2.4rem;
+        letter-spacing: 2px;
+        margin-bottom: 40px;
+        font-weight: normal;
+        color: #f0f0f0;
+    }
+
+    /* GALERÍA */
+    .gallery {
+        max-width: 1100px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 22px;
+    }
+
+    .item {
+        background: rgba(15, 15, 15, 0.9);
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid rgba(255,255,255,0.06);
+        box-shadow: 0 0 30px rgba(0,0,0,0.85);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .item:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 0 45px rgba(255,255,255,0.15);
+    }
+
+    .item img,
+    .item video,
+    .item iframe {
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+        display: block;
+        filter: grayscale(20%) contrast(105%);
+    }
+
+    iframe {
+        border: none;
+    }
+
+    .caption {
+        padding: 14px;
+        text-align: center;
+        font-size: 0.95rem;
+        font-style: italic;
+        letter-spacing: 0.5px;
+        color: #cfcfcf;
+        background: rgba(5,5,5,0.9);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 1.9rem;
+        }
+
+        .item img,
+        .item video,
+        .item iframe {
+            height: 180px;
+        }
+    }
+</style>
+</head>
+    </style>
+</head>
+<body>
+
+    <section class="container">
+        <div class="icon">🤖📦</div>
+        <h1>Robots en Almacenes y Logística</h1>
+
+        <p>
+            La robótica en almacenes, especialmente a través de <strong>Amazon Robotics</strong>,
+            ha transformado la logística moderna. Desde sistemas que mueven inventario hasta
+            robots con inteligencia artificial avanzada, estas tecnologías aceleran la preparación
+            y entrega de productos en todo el mundo. :contentReference[oaicite:0]{index=0}
+        </p>
+
+        <h2>📈 Hitos recientes</h2>
+        <div class="highlight">
+            <p>
+                📌 Amazon ha alcanzado el hito de <strong>1 millón de robots desplegados</strong>
+                en sus centros de distribución, trabajando junto a miles de empleados para
+                procesar pedidos más rápido. :contentReference[oaicite:1]{index=1}
+            </p>
+        </div>
+
+        <p>
+            Estos robots ayudan en alrededor del <strong>75 % de todos los pedidos globales</strong>,
+            asistiendo en la recolección, transporte y clasificación de productos para entregas más rápidas. :contentReference[oaicite:2]{index=2}
+        </p>
+
+        <h2>🤖 Tipos de Robots</h2>
+        <p>
+            • <strong>Hercules:</strong> robots móviles que transportan estantes completos con mercancía. :contentReference[oaicite:3]{index=3}
+        </p>
+        <p>
+            • <strong>Proteus:</strong> robot móvil autónomo que navega libremente por el almacén. :contentReference[oaicite:4]{index=4}
+        </p>
+        <p>
+            • <strong>Vulcan:</strong> robot avanzado con “sentido del tacto” que puede manipular objetos
+            delicados con precisión y trabajar hasta 20 h diarias. :contentReference[oaicite:5]{index=5}
+        </p>
+
+        <h2>🤝 Colaboración Humano-Robot</h2>
+        <p>
+            A pesar de la automatización, Amazon enfatiza que los robots están diseñados para
+            <strong>trabajar junto a personas</strong>, reduciendo tareas repetitivas y potenciando
+            trabajos más técnicos como mantenimiento o programación. :contentReference[oaicite:6]{index=6}
+        </p>
+
+        <h2>🧠 Inteligencia Artificial y Eficiencia</h2>
+        <p>
+            Amazon también ha lanzado <strong>DeepFleet</strong>, un modelo de IA que coordina
+            el movimiento de robots como si fuera un sistema de tráfico inteligente, reduciendo
+            congestión y mejorando rutas dentro de los centros logísticos. :contentReference[oaicite:7]{index=7}
+        </p>
+
+        <h2>📦 Impactos en la Logística</h2>
+        <p>
+            • Mejora de la velocidad en la preparación de pedidos.<br>
+            • Reducción de tiempos de entrega y costos operativos.<br>
+            • Mayor seguridad para empleados al reducir tareas físicas. :contentReference[oaicite:8]{index=8}
+        </p>
+
+        <p>
+            Esta combinación de robótica avanzada y logística inteligente está redefiniendo
+            cómo las empresas gestionan inventario, pedidos y entregas, marcando un futuro
+            en el que robots y humanos colaboran de forma más estrecha que nunca. :contentReference[oaicite:9]{index=9}
+        </p>
+    </section>
+
+    <h1>Galería Dark Elegante</h1>
+
+<section class="gallery">
+
+    <!-- FOTO -->
+    <div class="item">
+        <img src="foto11.jpeg"
+             alt="Robots en logística">
+        <div class="caption">Robots en almacenes automatizados</div>
+    </div>
+
+    <!-- FOTO -->
+    <div class="item">
+        <img src="foto12.jpeg"
+             alt="Centro logístico moderno">
+        <div class="caption">Centros logísticos de alta precisión</div>
+    </div>
+
+    <!-- VIDEO LOCAL -->
+    <div class="item">
+        <video controls>
+            <source src="video-robot.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+        </video>
+        <div class="caption">Automatización robótica en acción</div>
+    </div>
+
+    <!-- VIDEO YOUTUBE -->
+    <div class="item">
+        <iframe src="https://www.youtube.com/embed/5vC7I-oojGE"
+                allowfullscreen></iframe>
+        <div class="caption">Amazon Robotics – Tecnología logística</div>
+    </div>
+
+    <!-- VIDEO YOUTUBE -->
+    <div class="item">
+        <iframe src="https://www.youtube.com/embed/q8IdbodRG14"
+                allowfullscreen></iframe>
+        <div class="caption">Robot humanoide en almacenes</div>
+    </div>
+
+</section>
+
+</body>
+</html>
